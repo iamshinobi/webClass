@@ -110,7 +110,17 @@ Procedure  (Do *not* run as root)
    b. Connect to http://localhost:50095/
    
    
-
+9. Enable binding on all IP addresses
+   unix> qi-stop
+   unix> vi ~/quickinstall-home/accumulo-1.6.1/conf/accumulo-env.sh 
+ 
+     # Should the monitor bind to all network interfaces -- default: false
+     export ACCUMULO_MONITOR_BIND_ALL="true"
+     
+    unix> qi-start
+    
+    
+    
 How to Stop the Quick Install Accumulo
 --------------------------------------
 unix> cd ~/quickinstall-home/bin
